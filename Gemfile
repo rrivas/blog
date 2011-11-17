@@ -5,7 +5,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'simple_form'
-gem 'pq'
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,4 +27,7 @@ end
 group :development, :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'rspec'
+  gem 'factory_girl'
+  gem 'cucumber'
 end
