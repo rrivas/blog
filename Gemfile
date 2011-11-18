@@ -29,6 +29,9 @@ group :development, :test do
   # Pretty printed test output
   gem 'turn', :require => false
   gem 'rspec'
+  gem 'rspec-rails'
   gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'cucumber'
+  gem 'cucumber-rails'
 end
