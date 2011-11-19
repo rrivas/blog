@@ -1,11 +1,10 @@
 Blog::Application.routes.draw do
-  get "page/home"
+  match '/home' => 'page#home'
+  match '/projects' => 'page#projects'
+  match '/about' => 'page#about'
+  match '/contact' => 'page#contact'
 
-  get "page/projects"
-
-  get "page/about"
-
-  get "page/contact"
+  root :to => 'page#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
