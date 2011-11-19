@@ -7,4 +7,29 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    .topbar
+      .fill
+        .container
+          .brand
+            Robert Rivas
+          %ul.nav
+            %li.active
+              %a{ href: '/home' }
+                Home
+            %li
+              %a{ href: '/projects' }
+                Projects
+            %li
+              %a{ href: '/about' }
+                About
+            %li
+              %a{ href: '/contact' }
+                Contact
+          %form.pull-right
+            %input.input-small{ type: 'text', name: 'username', placeholder: 'Username' }
+            %input.input-small{ type: 'password', name: 'password', placeholder: 'Password' }
+            %button.btn{ type: 'submit' }
+              Sign in
+
+    .container
+      = yield
