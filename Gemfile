@@ -7,6 +7,8 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'pg'
 gem 'bootstrap-sass', '1.4.0'
+gem 'mongoid'
+gem 'bson_ext'
 
 # Gems used only for assets and not required
 # in production environments by default.
