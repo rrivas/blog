@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  devise_for :users
+
   match '/home' => 'page#home'
   match '/projects' => 'page#projects'
   match '/about' => 'page#about'
