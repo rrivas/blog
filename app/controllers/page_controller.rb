@@ -1,6 +1,6 @@
 class PageController < ApplicationController
   def home
-    @user = User.all
+    @users = User.all
   end
 
   def projects
