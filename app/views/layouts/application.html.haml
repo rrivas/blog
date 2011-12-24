@@ -27,9 +27,9 @@
                 = link_to 'Logout', destroy_user_session_path, :method => 'delete'
             - else
               %li
-                %form
-                  %input.input-small{ type: 'text', name: 'username', placeholder: 'Username' }
-                  %input.input-small{ type: 'password', name: 'password', placeholder: 'Password' }
+                %form{ action: new_user_session_path, method: 'post' }
+                  %input.input-small{ type: 'text', name: 'user[email]', placeholder: 'Username' }
+                  %input.input-small{ type: 'password', name: 'user[password]', placeholder: 'Password' }
                   %button.btn{ type: 'submit' }
                     Sign in
 
