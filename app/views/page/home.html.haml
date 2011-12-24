@@ -1,2 +1,5 @@
-%h1 Page#home
-%p Find me in app/views/page/home.html.haml
+:erb
+  <h3>Home</h3>
+  <% @users.each do |user| %>
+    <p>User: <%= user.name %> </p>
+  <% end %>
