@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  get "users/show"
+
   devise_for :users
 
   match '/home' => 'page#home'
