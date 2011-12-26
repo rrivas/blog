@@ -56,3 +56,27 @@ body{
 .topbar div > ul.logins{
   float: right;
 }
+
+form .input {
+  margin-left: 35px;
+}
+
+.simple_form label {  
+  float: left;  
+  width: 150px;  
+  text-align: right;  
+  margin: 0 10px;  
+}  
+  
+.simple_form div.input {  
+  margin-bottom: 10px;  
+}  
+  
+.simple_form div.boolean, .simple_form input[type='submit'] {  
+  margin-left: 120px;  
+}  
+  
+.simple_form div.boolean label {  
+  float: none;  
+  margin: 0;  
+} 
