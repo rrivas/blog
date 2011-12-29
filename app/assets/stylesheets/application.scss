@@ -81,7 +81,15 @@ form .input {
   margin: 0;  
 } 
 
+#post_title{
+  margin-bottom: 20px;
+}
+
 .description{
   color: grey;
   font-style: italic;
+}
+
+input, textarea, select, .uneditable-input {
+  width: 350px;
 }
