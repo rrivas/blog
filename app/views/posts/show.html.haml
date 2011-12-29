@@ -5,9 +5,8 @@
       = @post.title
     %small.description= @post.description
 
-  - markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
-  = raw markdown.render(@post.content)
-
+  = markdown(@post.content)
+  
   %br
   - if user_signed_in?
     = link_to 'Edit', edit_post_path(@post)
