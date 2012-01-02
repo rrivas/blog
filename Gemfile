@@ -10,6 +10,9 @@ gem 'mongoid'
 gem 'bson_ext'
 gem "devise", ">= 1.4.9"
 gem 'redcarpet'
+gem 'albino'
+gem 'nokogiri'
+gem 'pygmentize'
 
 # Gems used only for assets and not required
 # in production environments by default.
