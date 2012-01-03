@@ -6,7 +6,7 @@
     %small.description= @post.description
 
   = markdown(@post.content)
-  = Albino.colorize('puts "Hello World"', :ruby).html_safe
+  / = Albino.colorize('puts "Hello World"'.rstrip, :ruby).html_safe
 
   %br
   - if user_signed_in?

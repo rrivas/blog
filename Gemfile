@@ -43,5 +43,6 @@ group :development, :test do
   gem "database_cleaner", ">= 0.6.7"
   gem "launchy", ">= 2.0.5"
   gem "awesome_print"
+  gem 'unicorn'
 end
 
