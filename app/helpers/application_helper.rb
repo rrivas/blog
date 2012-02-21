@@ -5,8 +5,9 @@ module ApplicationHelper
   end
 
   def syntax_highlighter(html)
+    html = html.gsub(/\<pre\>\<code/, '<code').gsub(/\<\/code\>\<\/pre\>/, '</code>')
     doc = Nokogiri::HTML(html)
     doc.search("//code[@class]").each{ |code| code.replace(Albino.colorize(code.text.rstrip, code[:class])) }
-    doc.css('pre:first').first.inner_html.to_s
+    doc.css('body').inner_html.to_s
   end
 end
