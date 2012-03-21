@@ -5,7 +5,6 @@ gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'simple_form'
-gem 'bootstrap-sass', '~> 2.0.1'
 gem 'mongoid'
 gem 'bson_ext'
 gem "devise", ">= 1.4.9"
@@ -17,6 +16,7 @@ gem 'pygmentize'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'bootstrap-sass', '~> 2.0.1'
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
