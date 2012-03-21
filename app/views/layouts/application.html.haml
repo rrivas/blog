@@ -15,6 +15,10 @@
           %h1
             / Sanity Check
             %small Be proud of what you've done
+        - flash.each do |name, msg|
+          .alert{ :class => (name == :notice ? "alert-success" : "alert-error") }
+            %a.close{ 'data-dismiss' => "alert" }= '×'
+            = msg
         .row
           .span10
             = yield

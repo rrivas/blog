@@ -1,5 +1,5 @@
-.topbar
-  .fill
+.navbar
+  .navbar-inner
     .container
       .brand
         Robert Rivas
@@ -12,7 +12,7 @@
           = link_to 'About', about_path
         %li{ class: ( 'active' if contact_path == request.env['PATH_INFO'] ) }
           = link_to 'Contact', contact_path
-      %ul.logins
+      %ul.nav.pull-right
         - if user_signed_in?
           %li
             = link_to 'Profile', edit_user_registration_path
@@ -20,8 +20,8 @@
             = link_to 'Logout', destroy_user_session_path, :method => 'delete'
         - else
           %li
-            %form{ action: new_user_session_path, method: 'post' }
-              %input.input-small{ type: 'text', name: 'user[email]', placeholder: 'Email' }
-              %input.input-small{ type: 'password', name: 'user[password]', placeholder: 'Password' }
+            %form.navbar-form.pull-left{ action: new_user_session_path, method: 'post' }
+              %input.input-small.span2{ type: 'text', name: 'user[email]', placeholder: 'Email' }
+              %input.input-small.span2{ type: 'password', name: 'user[password]', placeholder: 'Password' }
               %button.btn{ type: 'submit' }
                 Sign in
