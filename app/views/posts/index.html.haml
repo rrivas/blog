@@ -12,8 +12,8 @@
       %td= link_to post.title, post
       %td.description= post.description
       - if user_signed_in?
-        %td= link_to 'Edit', edit_post_path(post)
+        %td= link_to 'Edit', edit_post_path(post), :class => 'btn btn-mini'
 
 %br
 
-= link_to 'New Post', new_post_path if user_signed_in?
+= link_to 'New Post', new_post_path, :class => 'btn btn-primary' if user_signed_in?
