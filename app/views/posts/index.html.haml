@@ -1,6 +1,6 @@
 %h1 Listing posts
 
-%table.zebra-striped
+%table.table.table-striped
   %tr
     %th Title
     %th Description
@@ -10,7 +10,7 @@
   - @posts.each do |post|
     %tr
       %td= link_to post.title, post
-      %td= post.description
+      %td.description= post.description
       - if user_signed_in?
         %td= link_to 'Edit', edit_post_path(post)
 
