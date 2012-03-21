@@ -19,8 +19,8 @@
           .alert{ :class => (name == :notice ? "alert-success" : "alert-error") }
             %a.close{ 'data-dismiss' => "alert" }= '×'
             = msg
-        .row
-          .span10
+        .row-fluid
+          .span9
             = yield
-          .span4
+          .span3.fluid-second-column
             Second Column
