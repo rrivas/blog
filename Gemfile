@@ -5,7 +5,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'simple_form'
-gem 'bootstrap-sass', '1.4.0'
+gem 'bootstrap-sass', '~> 2.0.1'
 gem 'mongoid'
 gem 'bson_ext'
 gem "devise", ">= 1.4.9"
