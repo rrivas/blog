@@ -2,5 +2,8 @@
 
 FactoryGirl.define do
   factory :post do
+    title 'Post title'
+    description 'Post description'
+    content 'Post content'
   end
 end
