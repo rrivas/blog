@@ -43,3 +43,16 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 end
+
+def post_login(user)
+  post user_session_path, :login => user.email, :password => 'password'
+end
+
+def login(user)
+  visit new_user_session_path
+  within('#user_new') do
+    fill_in 'Email', :with => @user.email
+    fill_in 'Password', :with => 'password'
+  end
+  find('#user_new').click_button('Sign in')
+end
