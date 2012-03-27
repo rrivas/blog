@@ -44,5 +44,6 @@ group :development, :test do
   gem "launchy", ">= 2.0.5"
   gem "awesome_print"
   gem 'unicorn'
+  gem 'guard-rspec'
 end
 

@@ -207,3 +207,7 @@ Devise.setup do |config|
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
 end
+
+RSpec.configure do |config|
+  config.include Devise::TestHelpers, :type => :controller
+end
