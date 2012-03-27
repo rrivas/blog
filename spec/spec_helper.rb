@@ -2,6 +2,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'capybara/rspec'
 require 'rspec/autorun'
 require 'database_cleaner'
 
@@ -41,4 +42,17 @@ RSpec.configure do |config|
   config.before(:each) do
     DatabaseCleaner.clean
   end
+end
+
+def post_login(user)
+  post user_session_path, :login => user.email, :password => 'password'
+end
+
+def login(user)
+  visit new_user_session_path
+  within('#user_new') do
+    fill_in 'Email', :with => @user.email
+    fill_in 'Password', :with => 'password'
+  end
+  find('#user_new').click_button('Sign in')
 end
