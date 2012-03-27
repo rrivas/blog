@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :post do
-    title 'Post title'
-    description 'Post description'
-    content 'Post content'
+    title 'This is a test post title'
+    description 'This is a Description for the test post'
+    content 'Content for the test post'
   end
 end
